@@ -27,7 +27,7 @@
 .copy-status { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: max-content; max-width: calc(100% - 32px); padding: 12px 20px; border-radius: 6px; background: #19354e; color: #fff; font: 600 20px/1.6 var(--sans); text-align: center; z-index: 100; opacity: 0; pointer-events: none; }
 .copy-status.visible { opacity: 1; }
 .copy-buffer { position: fixed; top: 0; left: 0; width: 1px; height: 1px; opacity: 0; font-size: 16px; }
-@media (max-width: 600px) {
+@container lp (max-width: 600px) {
   .copy-review .copy-toolbar { padding: 12px 14px; }
   .copy-toolbar-title { font-size: 21px; }
   .copy-toolbar-hint { font-size: 17px; }
@@ -42,7 +42,7 @@
   .copy-card-text { font-size: 22px; }
 }
 
-@media (max-width: 600px) {
+@container lp (max-width: 600px) {
   .copy-review .line-button::before { grid-area: 1 / 1; }
   .copy-review .line-button > span { grid-area: 2 / 1; }
   .copy-review .line-button > svg { display: none; }

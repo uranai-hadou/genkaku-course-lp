@@ -9,7 +9,15 @@
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+/* Responsive rules follow the page frame, including the phone-width desktop LP. */
+body { container: lp / inline-size; }
+html.phone-layout { background: #eee4d3; }
+body[data-copy-prefix="R-"] { width: min(100%, 390px); margin-inline: auto; font-size: 22px; background: #faf5e9; }
 body { margin: 0; color: var(--ink); background: radial-gradient(ellipse at 15% 5%, #fcf8ed, transparent 45%), #eee4d3; font: 500 26px/1.9 var(--sans); letter-spacing: .025em; -webkit-font-smoothing: antialiased; }
+@media (max-width: 600px) {
+  body { font-size: 22px; background: #faf5e9; }
+}
+
 button { font: inherit; cursor: pointer; touch-action: manipulation; border: 0; }
 button, a { -webkit-tap-highlight-color: transparent; }
 button:focus-visible, a:focus-visible { outline: 3px solid var(--green); outline-offset: 5px; }
@@ -111,18 +119,17 @@ mark { background: linear-gradient(transparent 65%, #e6cfa175 65%, #e6cfa175 95%
 .dialog-dismiss { border: 1px solid #a98c53; padding: 12px 22px; background: #f0e3c9; color: #5c3f1b; margin-top: 25px; border-radius: 3px; font-size: 22px; }
 .dialog-open { overflow: hidden; }
 
-@media (min-width: 1100px) {
+@container lp (min-width: 1100px) {
   .ad-page { margin-block: 24px; }
 }
-@media (min-width: 601px) and (max-width: 800px) {
+@container lp (min-width: 601px) and (max-width: 800px) {
   .hero-poster { padding: 30px; gap: 22px 15px; grid-template-columns: 1.2fr .8fr; }
   .hero h1 { font-size: clamp(38px, 6vw, 48px); }
   .headline-first { font-size: 45px; }
   .headline-first em { font-size: 68px; }
   .hero-promise { font-size: 26px; }
 }
-@media (max-width: 600px) {
-  body { font-size: 22px; background: #faf5e9; }
+@container lp (max-width: 600px) {
   .ad-page { border: 0; box-shadow: none; }
   .section { padding: 55px 22px; }
   h2 { font-size: 32px; line-height: 1.8; letter-spacing: 0; }
@@ -185,7 +192,7 @@ mark { background: linear-gradient(transparent 65%, #e6cfa175 65%, #e6cfa175 95%
   .preview-dialog h2 { font-size: 23px; }
   .preview-dialog p { font-size: 20px; }
 }
-@media (max-width: 360px) {
+@container lp (max-width: 360px) {
   .section { padding-inline: 16px; }
   h2 { font-size: 29px; }
   .hero-poster { padding-inline: 16px; gap: 18px 10px; }
@@ -279,7 +286,7 @@ mark { background: linear-gradient(transparent 65%, #e6cfa175 65%, #e6cfa175 95%
 .fee-amount strong { font-size: 70px; }
 .fee-description { font-size: 26px; line-height: 1.9; }
 .fee-context { margin-top: 25px; padding-top: 22px; border-top: 1px solid #b6986480; font-size: 22px; line-height: 1.85; }
-@media (max-width: 800px) {
+@container lp (max-width: 800px) {
   .hero-portrait { grid-column: 1 / -1; grid-row: 4; max-width: 380px; width: 100%; justify-self: center; }
   .hero-portrait img { width: 240px; margin-inline: auto; aspect-ratio: .88; }
   .hero-portrait figcaption { background: transparent; border: 0; }
@@ -287,7 +294,7 @@ mark { background: linear-gradient(transparent 65%, #e6cfa175 65%, #e6cfa175 95%
   .hero h1 .headline-second, .hero h1 .headline-third { display: inline; }
   .hero-promise { grid-column: 1 / -1; grid-row: 3; text-align: center; }
 }
-@media (max-width: 600px) {
+@container lp (max-width: 600px) {
   .hero-portrait img { width: 210px; }
   .capacity-ribbon { font-size: 22px; padding: 14px 16px; letter-spacing: 0; }
   .capacity-ribbon strong { font-size: 30px; }
@@ -335,7 +342,7 @@ mark { background: linear-gradient(transparent 65%, #e6cfa175 65%, #e6cfa175 95%
   .story-chapter p { font-size: 22px; line-height: 1.95; letter-spacing: 0; }
   .story-chapter p + p { margin-top: 24px; }
 }
-@media (max-width: 360px) {
+@container lp (max-width: 360px) {
   .hero .income-headline { font-size: 30px; }
   .income-headline-lead { font-size: 28px; }
   .clairvoyance-emphasis { font-size: 52px; }
@@ -347,7 +354,7 @@ body[data-copy-prefix="R-"] { -webkit-text-size-adjust: 100%; text-size-adjust: 
 body[data-copy-prefix="R-"] .ad-page { line-break: strict; overflow-wrap: break-word; }
 .copy-line { display: block; }
 .copy-phrase { display: inline-block; max-width: 100%; vertical-align: top; }
-@media (max-width: 600px) {
+@container lp (max-width: 600px) {
   body[data-copy-prefix="R-"] .ad-page { letter-spacing: 0; }
   body[data-copy-prefix="R-"] .cta-note { font-size: 22px; }
   body[data-copy-prefix="R-"] :is(.reason-card p, .support-card p, .voice-excerpts p, .voice-full-text p, .story-chapter p) { text-wrap: pretty; }
@@ -355,6 +362,6 @@ body[data-copy-prefix="R-"] .ad-page { line-break: strict; overflow-wrap: break-
   body[data-copy-prefix="R-"] .voice-excerpts p + p { margin-top: 32px; }
   body[data-copy-prefix="R-"] :is(.student-voice, .reason-card, .support-card) { padding-inline: 14px; }
 }
-@media (max-width: 360px) {
+@container lp (max-width: 360px) {
   body[data-copy-prefix="R-"] :is(.student-voice, .reason-card, .support-card) { padding-inline: 12px; }
 }
