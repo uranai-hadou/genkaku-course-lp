@@ -123,7 +123,7 @@
     );
   }
 
-  // M is specific to the income version; existing groups keep their IDs.
+  // Shared learning topics keep matching IDs across the two versions.
   if (document.querySelector('.income-reasons')) {
     groups.splice(groups.findIndex(group => group.id === 'E'), 0, {
       id: 'M', name: '霊視の価値と鑑定料金の例', selector: '.income-reasons', fields: [
@@ -142,6 +142,14 @@
     });
   }
 
+  if (document.querySelector('.authentic-reasons')) {
+    const group = groups.find(group => group.id === 'M');
+    group.name = '霊視を学ぶうえで大切なこと';
+    const names = { M1: '霊視を学ぶうえで大切なこと', M2: '素質と占術の掛け合わせ', M3: '素質の確認・見出し', M4: '素質の確認と講座案内', M11: '本物の霊視占い師を目指す' };
+    group.fields = group.fields.filter(field => !/^M(?:7|8|9|10)$/.test(field[0]))
+      .map(([id, name, selector]) => [id, names[id] || name, selector]);
+  }
+
   // Capacity copy only appears in versions that include the matching elements.
   const capacityFields = [
     ['A', ['A5', '講座の受け入れは先着10名', '.capacity-ribbon']],
@@ -156,7 +164,7 @@
 
   if (document.querySelector('.story-learning')) {
     groups.find(group => group.id === 'H').fields.push(['H9', '学びと実践の歩み', '.story-learning']);
-  } else if (prefix === 'R-') {
+  } else if (document.querySelector('.story-message')) {
     groups.find(group => group.id === 'H').fields.push(['H9', '旧・学びと実践の歩み', null, '削除済み（欠番）']);
   }
   if (document.querySelector('.story-message')) {

@@ -12,7 +12,7 @@ html { scroll-behavior: smooth; }
 /* Responsive rules follow the page frame, including the phone-width desktop LP. */
 body { container: lp / inline-size; }
 html.phone-layout { background: #eee4d3; }
-body[data-copy-prefix="R-"] { width: min(100%, 390px); margin-inline: auto; font-size: 22px; background: #faf5e9; }
+body[data-lp-layout="phone"] { width: min(100%, 390px); margin-inline: auto; font-size: 22px; background: #faf5e9; }
 body { margin: 0; color: var(--ink); background: radial-gradient(ellipse at 15% 5%, #fcf8ed, transparent 45%), #eee4d3; font: 500 26px/1.9 var(--sans); letter-spacing: .025em; -webkit-font-smoothing: antialiased; }
 @media (max-width: 600px) {
   body { font-size: 22px; background: #faf5e9; }
@@ -351,24 +351,24 @@ mark { background: linear-gradient(transparent 65%, #e6cfa175 65%, #e6cfa175 95%
 
 /* Short display copy wraps only between meaningful phrases. Long prose flows
    naturally; do not put manual newlines inside testimonial paragraphs. */
-body[data-copy-prefix="R-"] { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
-body[data-copy-prefix="R-"] .ad-page { line-break: strict; overflow-wrap: break-word; }
+body[data-lp-layout="phone"] { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body[data-lp-layout="phone"] .ad-page { line-break: strict; overflow-wrap: break-word; }
 .copy-line { display: block; }
 .copy-phrase { display: inline-block; max-width: 100%; vertical-align: top; }
 @container lp (max-width: 600px) {
-  body[data-copy-prefix="R-"] .ad-page { letter-spacing: 0; }
-  body[data-copy-prefix="R-"] .cta-note { font-size: 22px; }
-  body[data-copy-prefix="R-"] :is(.reason-card p, .support-card p, .voice-excerpts p, .voice-full-text p, .story-chapter p) { text-wrap: pretty; }
-  body[data-copy-prefix="R-"] .voice-excerpts p { white-space: normal; line-height: 1.95; }
-  body[data-copy-prefix="R-"] .voice-excerpts p + p { margin-top: 32px; }
-  body[data-copy-prefix="R-"] :is(.student-voice, .reason-card, .support-card) { padding-inline: 14px; }
+  body[data-lp-layout="phone"] .ad-page { letter-spacing: 0; }
+  body[data-lp-layout="phone"] .cta-note { font-size: 22px; }
+  body[data-lp-layout="phone"] :is(.reason-card p, .support-card p, .voice-excerpts p, .voice-full-text p, .story-chapter p) { text-wrap: pretty; }
+  body[data-lp-layout="phone"] .voice-excerpts p { white-space: normal; line-height: 1.95; }
+  body[data-lp-layout="phone"] .voice-excerpts p + p { margin-top: 32px; }
+  body[data-lp-layout="phone"] :is(.student-voice, .reason-card, .support-card) { padding-inline: 14px; }
 }
 @container lp (max-width: 360px) {
-  body[data-copy-prefix="R-"] :is(.student-voice, .reason-card, .support-card) { padding-inline: 12px; }
+  body[data-lp-layout="phone"] :is(.student-voice, .reason-card, .support-card) { padding-inline: 12px; }
 }
 
 /* User-requested smaller type for the fee example note only. */
-body[data-copy-prefix="R-"] .fee-context { font-size: 16px; line-height: 1.8; }
+body[data-lp-layout="phone"] .fee-context { font-size: 16px; line-height: 1.8; }
 
 /* The remaining message now leads the instructor section. */
 .story-message .story-chapters { margin-top: 0; }
