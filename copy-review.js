@@ -176,7 +176,7 @@
       if (node.tagName === 'BR') return '\n';
       let text = [...node.childNodes].map(walk).join('');
       // Keep intentional visual line breaks independently of screen width.
-      if (node.matches('.headline-first, .headline-second, .headline-third, .income-headline-lead, .income-headline-main, .mentor-name')) text += '\n';
+      if (node.matches('.headline-first, .headline-second, .headline-third, .income-headline-lead, .income-headline-main, .mentor-name, .copy-line')) text += '\n';
       else if (blockTags.has(node.tagName)) text += '\n';
       return text;
     }
