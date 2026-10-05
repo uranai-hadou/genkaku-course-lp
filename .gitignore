@@ -1,0 +1,10 @@
+.DS_Store
+node_modules/
+preview/
+public/
+*.tar.gz
+.env
+.env.*
+assets/hero-crystal.png
+assets/hero-crystal.webp
+assets/image-prompt.txt
