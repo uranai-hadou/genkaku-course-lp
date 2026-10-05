@@ -365,3 +365,6 @@ body[data-copy-prefix="R-"] .ad-page { line-break: strict; overflow-wrap: break-
 @container lp (max-width: 360px) {
   body[data-copy-prefix="R-"] :is(.student-voice, .reason-card, .support-card) { padding-inline: 12px; }
 }
+
+/* User-requested smaller type for the fee example note only. */
+body[data-copy-prefix="R-"] .fee-context { font-size: 16px; line-height: 1.8; }
