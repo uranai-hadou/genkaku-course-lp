@@ -59,7 +59,7 @@
       ['G10', '旧・3人目の見出し', null, '削除済み（欠番）'],
       ['G11', '旧・3人目の本文', null, '削除済み（欠番）'],
     ] },
-    { id: 'H', name: '玄岩の物語', selector: '.story', fields: [
+    { id: 'H', name: '玄岳の物語', selector: '.story', fields: [
       ['H1', '見出し', 'h2'],
       ['H2', '講師名・実績', 'figcaption'],
       ['H3', '人を知りたくて学び続けた', '.story-chapter:nth-child(1)'],
@@ -128,7 +128,7 @@
     groups.splice(groups.findIndex(group => group.id === 'E'), 0, {
       id: 'M', name: '霊視の価値と鑑定料金の例', selector: '.income-reasons', fields: [
         ['M1', '霊視占い師が稼ぎやすいと考える理由', 'h2'],
-        ['M2', '玄岩が考える2つの理由', '.reasons-intro'],
+        ['M2', '玄岳が考える2つの理由', '.reasons-intro'],
         ['M3', '才能と希少性・見出し', '.reason-skill h3'],
         ['M4', '素質が必要だからこその希少性', '.reason-skill p'],
         ['M5', '占術の掛け合わせ・見出し', '.reason-reading h3'],
@@ -239,7 +239,7 @@
   }
 
   document.body.classList.add('copy-review');
-  document.title = `文章の修正番号｜${variant ? variant + '｜' : ''}玄岩LP`;
+  document.title = `文章の修正番号｜${variant ? variant + '｜' : ''}玄岳LP`;
   let view = params.get('view') === 'list' ? 'list' : 'page';
   const make = (tag, className, text) => {
     const node = document.createElement(tag);
