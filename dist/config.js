@@ -1,2 +1,2 @@
-// 公開前に公式LINEの友だち追加URLを設定してください。
-window.GENKAKU_CONFIG = { lineUrl: '' };
+// 公式LINEの友だち追加URL。通常表示のLINEボタン全箇所で共用します。
+window.GENKAKU_CONFIG = { lineUrl: 'https://lin.ee/nV3UYLV' };
