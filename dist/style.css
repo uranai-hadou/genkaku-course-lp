@@ -257,6 +257,7 @@ mark { background: linear-gradient(transparent 65%, #e6cfa175 65%, #e6cfa175 95%
 .voice-excerpts { margin: 30px 0; text-align: left; font-size: 26px; line-height: 1.95; }
 .voice-excerpts p + p, .voice-full-text p + p { margin-top: 28px; }
 .voice-author { padding-top: 26px; border-top: 1px solid #cdb68b; font-size: 24px; line-height: 1.85; }
+.student-voice > h3 + .voice-author { margin-top: 22px; padding-top: 0; border-top: 0; }
 .voice-author strong { font-size: 30px; }
 .voice-website { margin-top: 18px; font-size: 22px; }
 .voice-website a { display: inline-block; padding-block: 8px; color: var(--gold); text-decoration-thickness: 1px; text-underline-offset: 5px; }
