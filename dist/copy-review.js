@@ -154,6 +154,10 @@
     if (document.querySelector(field[2])) groups.find(group => group.id === groupId).fields.push(field);
   });
 
+  if (document.querySelector('.story-learning')) {
+    groups.find(group => group.id === 'H').fields.push(['H9', '学びと実践の歩み', '.story-learning']);
+  }
+
   // Each variant keeps the same section mapping, with distinct editing IDs.
   if (prefix) {
     const incomeNames = { A3: '収入につなげる目標', C2: '誰から仕事の土台を学ぶか', C3: '収入につなげたい気持ち', C4: '仕事にする自信', D4: '選ばれる占い師への目標' };
