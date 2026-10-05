@@ -268,7 +268,6 @@ mark { background: linear-gradient(transparent 65%, #e6cfa175 65%, #e6cfa175 95%
 .story-portrait { width: 100%; max-width: 380px; }
 .story-portrait img { width: 220px; margin-inline: auto; }
 .story-portrait .mentor-name { font: 600 34px/1.8 var(--serif); }
-.story-learning { max-width: 680px; text-align: left; text-wrap: pretty; }
 .story-chapters { max-width: 680px; margin: 50px auto 0; }
 .story-chapter { padding-top: 35px; border-top: 1px solid #d4be93; }
 .story-chapter + .story-chapter { margin-top: 50px; }
@@ -370,3 +369,9 @@ body[data-copy-prefix="R-"] .ad-page { line-break: strict; overflow-wrap: break-
 
 /* User-requested smaller type for the fee example note only. */
 body[data-copy-prefix="R-"] .fee-context { font-size: 16px; line-height: 1.8; }
+
+/* The remaining message now leads the instructor section. */
+.story-message .story-chapters { margin-top: 0; }
+.story-message .story-chapter { padding-top: 0; border-top: 0; }
+.story-message .story-chapter > h2 { color: var(--gold); }
+.story-message .story-portrait { margin: 28px auto 32px; }

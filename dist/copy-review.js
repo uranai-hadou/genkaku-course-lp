@@ -156,6 +156,13 @@
 
   if (document.querySelector('.story-learning')) {
     groups.find(group => group.id === 'H').fields.push(['H9', '学びと実践の歩み', '.story-learning']);
+  } else if (prefix === 'R-') {
+    groups.find(group => group.id === 'H').fields.push(['H9', '旧・学びと実践の歩み', null, '削除済み（欠番）']);
+  }
+  if (document.querySelector('.story-message')) {
+    const story = groups.find(group => group.id === 'H');
+    story.fields = story.fields.map(field => field[0] === 'H1'
+      ? ['H1', '旧・学ぶ側だった頃の見出し', null, '削除済み（欠番）'] : field);
   }
 
   // Each variant keeps the same section mapping, with distinct editing IDs.
@@ -177,6 +184,8 @@
     function walk(node) {
       if (node.nodeType === Node.TEXT_NODE) return node.textContent;
       if (node.nodeType !== Node.ELEMENT_NODE || node.matches('svg, [aria-hidden="true"]')) return '';
+      // The relocated portrait keeps its own H2 field; omit it from H8's text.
+      if (element.matches('.story-chapter') && node.matches('.story-portrait')) return '';
       if (node.tagName === 'BR') return '\n';
       let text = [...node.childNodes].map(walk).join('');
       // Keep intentional visual line breaks independently of screen width.
