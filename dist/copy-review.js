@@ -92,6 +92,25 @@
     ] },
   ];
 
+  if (document.querySelector('.student-voice')) {
+    const group = groups.find(group => group.id === 'G');
+    group.fields = group.fields.map(field => {
+      if (field[0] === 'G4') return ['G4', '森本さんの感想・見出し', '.student-voice h3'];
+      if (field[0] === 'G5') return ['G5', '感受性の強さへの悩み', '.voice-excerpt-1'];
+      return field;
+    });
+    group.fields.push(
+      ['G12', '自分への理解と受け入れ', '.voice-excerpt-2'],
+      ['G13', '自分らしい表現とサロン開業', '.voice-excerpt-3'],
+      ['G14', '現在の活動と叶った夢', '.voice-excerpt-4'],
+      ['G15', 'お名前・肩書き', '.voice-author'],
+      ['G16', '森本さんのサイトへのリンク', '.voice-website'],
+      ['G17', '原文からの抜粋の案内', '.voice-excerpt-label'],
+      ['G18', '全文を開くボタン', '.voice-full summary'],
+      ['G19', '感想の全文', '.voice-full-text'],
+    );
+  }
+
   // M is specific to the income version; existing groups keep their IDs.
   if (document.querySelector('.income-reasons')) {
     groups.splice(groups.findIndex(group => group.id === 'E'), 0, {
@@ -171,7 +190,11 @@
   function scrollToField() {
     const id = location.hash.replace(/^#copy-/, '');
     const field = fields.get(id);
-    if (field) field.element.scrollIntoView({ block: 'center', behavior: 'instant' });
+    if (field) {
+      const disclosure = field.element.closest('details');
+      if (disclosure) disclosure.open = true;
+      field.element.scrollIntoView({ block: 'center', behavior: 'instant' });
+    }
   }
   const params = new URLSearchParams(location.search);
   if (params.get('review') !== '1') {
