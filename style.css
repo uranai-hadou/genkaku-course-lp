@@ -340,3 +340,19 @@ mark { background: linear-gradient(transparent 65%, #e6cfa175 65%, #e6cfa175 95%
   .income-headline-lead { font-size: 28px; }
   .clairvoyance-emphasis { font-size: 52px; }
 }
+
+/* Keep large Japanese copy readable on narrow screens, including manual edits. */
+.mobile-copy-break { display: none; }
+@media (max-width: 600px) {
+  .mobile-copy-break { display: initial; }
+  body[data-copy-prefix="R-"] .ad-page { line-break: strict; overflow-wrap: break-word; }
+  body[data-copy-prefix="R-"] .ad-page p { text-wrap: pretty; }
+  body[data-copy-prefix="R-"] :is(h2, h3, .cta-heading, .cta-note, .reading p, .capacity-conditions, .voice-author, .voice-excerpt-label) { text-wrap: balance; }
+  body[data-copy-prefix="R-"] .line-button > span { text-wrap: balance; }
+  body[data-copy-prefix="R-"] .voice-excerpts p { white-space: pre-line; line-height: 1.95; }
+  body[data-copy-prefix="R-"] .voice-excerpts p + p { margin-top: 32px; }
+  body[data-copy-prefix="R-"] .student-voice { padding-inline: 14px; }
+}
+@media (max-width: 360px) {
+  body[data-copy-prefix="R-"] .student-voice { padding-inline: 10px; }
+}

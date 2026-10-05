@@ -92,6 +92,18 @@
     ] },
   ];
 
+  // Explicit chapter IDs survive deletion or reordering in the HTML editor.
+  if (document.querySelector('.story-chapter[data-story-copy-id]')) {
+    const story = groups.find(group => group.id === 'H');
+    story.fields = story.fields.map(field => {
+      if (!/^H[3-8]$/.test(field[0])) return field;
+      const selector = `.story-chapter[data-story-copy-id="${field[0]}"]`;
+      return document.querySelector(selector)
+        ? [field[0], field[1], selector]
+        : [field[0], field[1], null, '削除済み（欠番）'];
+    });
+  }
+
   if (document.querySelector('.student-voice')) {
     const group = groups.find(group => group.id === 'G');
     group.fields = group.fields.map(field => {
