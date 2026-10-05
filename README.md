@@ -107,6 +107,6 @@ J5の無料案内とK1のスマートフォン追従ボタンは削除済みで�
 
 Sitesで公開します。`.openai/hosting.json` が同じサイトの識別情報です。再公開時はこのサイトを引き継ぎます。
 
-公開対象は稼げる訴求版です。`node publish-static.mjs` により `income.html` と必要な画像・CSS・JavaScriptだけを `public/` に書き出します。公開URLのトップページも稼げる訴求版になります。元の `index.html` はローカルの別バージョンとして残します。文章の番号付き表示は公開URLに `?review=1&view=page` を付けて確認できます。
+公開対象は稼げる訴求版です。`node publish-static.mjs` により `income.html` と必要な画像・CSS・JavaScriptだけを `dist/` に書き出します。公開URLのトップページも稼げる訴求版になります。元の `index.html` はローカルの別バージョンとして残します。文章の番号付き表示は公開URLに `?review=1&view=page` を付けて確認できます。
 
 HTMLを保存するとローカルには反映されますが、公開サイトへの反映には再公開が必要です。LINEリンクは `config.js` で設定します。
