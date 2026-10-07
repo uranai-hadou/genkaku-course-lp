@@ -150,6 +150,19 @@
       .map(([id, name, selector]) => [id, names[id] || name, selector]);
   }
 
+  if (document.querySelector('.side-income')) {
+    groups.splice(groups.findIndex(group => group.id === 'D'), 0, {
+      id: 'N', name: '主婦の方へ・副業の目標', selector: '.side-income', fields: [
+        ['N1', '主婦の方への呼びかけ', '.side-income-kicker'],
+        ['N2', '副業で月10万円を目指す', 'h2'],
+        ['N3', '学びへの一歩', '.side-income-message'],
+        ['N4', '売上の計算例・見出し', 'h3'],
+        ['N5', '鑑定料金と件数の計算', '.side-income-calculation'],
+        ['N6', '計算例についての補足', '.side-income-note'],
+      ],
+    });
+  }
+
   // Capacity copy only appears in versions that include the matching elements.
   const capacityFields = [
     ['A', ['A5', '講座の受け入れは先着10名', '.capacity-ribbon']],
