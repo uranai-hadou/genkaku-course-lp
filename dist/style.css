@@ -379,7 +379,7 @@ body[data-lp-layout="phone"] .fee-context { font-size: 16px; line-height: 1.8; }
 /* Income version only: a hypothetical side-business sales target. */
 .side-income { background: linear-gradient(135deg, #f6eddc, #ead6af); border-block: 1px solid #bda06c; }
 .side-income-kicker { font-size: 22px; line-height: 1.9; margin-bottom: 24px; }
-.side-income h2 { color: var(--gold); font-size: 29px; line-height: 1.7; letter-spacing: 0; }
+:is(.side-income, .fulltime-income) h2 { color: var(--gold); font-size: 29px; line-height: 1.7; letter-spacing: 0; }
 .side-income-target { margin-block: 8px; }
 .side-income-target strong { font-size: 56px; line-height: 1.3; }
 .side-income-message { margin-top: 28px; font-size: 22px; line-height: 1.9; }
@@ -388,3 +388,10 @@ body[data-lp-layout="phone"] .fee-context { font-size: 16px; line-height: 1.8; }
 .side-income-calculation { margin-top: 18px; font-size: 22px; line-height: 1.9; letter-spacing: 0; }
 .side-income-calculation strong { color: var(--gold); font-size: 32px; }
 .side-income-note { margin-top: 20px; font-size: 14px; line-height: 1.8; text-align: left; text-wrap: pretty; }
+
+/* A separate full-time goal, using the same readable sales-example layout. */
+.fulltime-income { background: #faf5e9; border-bottom: 1px solid #bda06c; }
+.fulltime-income-rate { margin-top: 28px; padding-block: 22px; border-block: 1px solid #bda06c; }
+.fulltime-rate-label { font-size: 22px; }
+.fulltime-rate-amount { margin-top: 8px; font-family: var(--serif); font-size: 25px; color: var(--gold); }
+.fulltime-rate-amount strong { margin-left: 10px; font-size: 42px; }

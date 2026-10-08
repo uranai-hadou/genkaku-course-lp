@@ -163,6 +163,21 @@
     });
   }
 
+  if (document.querySelector('.fulltime-income')) {
+    groups.splice(groups.findIndex(group => group.id === 'D'), 0, {
+      id: 'O', name: '本業としての目標', selector: '.fulltime-income', fields: [
+        ['O1', '本業にしたい方への呼びかけ', '.side-income-kicker'],
+        ['O2', '本業で月100万円を目指す', 'h2'],
+        ['O3', '鑑定の力と信頼を育てる', '.side-income-message'],
+        ['O4', '鑑定料金の設定例・見出し', '.fulltime-rate-label'],
+        ['O5', '1件3万円からの料金設定例', '.fulltime-rate-amount'],
+        ['O6', '売上の計算例・見出し', 'h3'],
+        ['O7', '鑑定料金と件数の計算', '.side-income-calculation'],
+        ['O8', '計算例についての補足', '.side-income-note'],
+      ],
+    });
+  }
+
   // Capacity copy only appears in versions that include the matching elements.
   const capacityFields = [
     ['A', ['A5', '講座の受け入れは先着10名', '.capacity-ribbon']],
