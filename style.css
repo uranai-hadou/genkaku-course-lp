@@ -387,4 +387,4 @@ body[data-lp-layout="phone"] .fee-context { font-size: 16px; line-height: 1.8; }
 .side-income-example h3 { font-size: 22px; line-height: 1.8; }
 .side-income-calculation { margin-top: 18px; font-size: 22px; line-height: 1.9; letter-spacing: 0; }
 .side-income-calculation strong { color: var(--gold); font-size: 32px; }
-.side-income-note { margin-top: 20px; font-size: 18px; line-height: 1.8; text-align: left; text-wrap: pretty; }
+.side-income-note { margin-top: 20px; font-size: 14px; line-height: 1.8; text-align: left; text-wrap: pretty; }
