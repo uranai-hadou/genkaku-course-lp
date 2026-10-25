@@ -38,7 +38,7 @@ npm run dev
 
 ## LINEと講座の案内
 
-`config.js` の `lineUrl` は、ユーザー指定の `https://lin.ee/nV3UYLV` です。
+`config.js` の `lineUrl` は、ユーザー指定の `https://utage-system.com/line/open/0JdaHjz3sZbd?mtid=WXagJdPjm8oD` です。
 
 無料のオンライン対面霊視で悩みを伺い、玄岳が素質があると判断した方に講座を案内します。「先着10名」は講座の受け入れ人数です。無料霊視やLINE追加の人数制限ではありません。
 
@@ -58,3 +58,12 @@ HTMLのローカル保存だけでは公開ページは更新されません。�
 - 森本さんの施術写真：`assets/morimoto-akiko.jpg`（ユーザー提供。元の縦横比を保持）
 - フォント：Noto Sans JP / Noto Serif JP。読み込めない場合はシステムフォント。
 - 参考LP：https://slhhz.hp.peraichi.com/
+
+## GitHub Pages
+
+GitHub: https://github.com/uranai-hadou/genkaku-course-lp
+
+- 稼げる訴求版: https://uranai-hadou.github.io/genkaku-course-lp/
+- 本物訴求版: https://uranai-hadou.github.io/genkaku-course-lp/authentic.html
+
+`main` にpushすると、GitHub Actionsが `publish-static.mjs` を実行して `dist/` を公開します。両LPのMetaピクセルIDは `4129005744063521` です。
