@@ -38,7 +38,10 @@ npm run dev
 
 ## LINEと講座の案内
 
-`config.js` の `lineUrl` は、ユーザー指定の `https://utage-system.com/line/open/0JdaHjz3sZbd?mtid=WXagJdPjm8oD` です。
+`config.js` はHTMLの `data-copy-variant` に応じて、各LPの全LINEボタンに以下のURLを設定します。
+
+- 本物訴求版：`https://utage-system.com/line/open/60PamOaeaVak?mtid=bjrQvo4kK9U7`
+- 稼げる訴求版：`https://utage-system.com/line/open/60PamOaeaVak?mtid=7qt1BBj0lUfa`
 
 無料のオンライン対面霊視で悩みを伺い、玄岳が素質があると判断した方に講座を案内します。「先着10名」は講座の受け入れ人数です。無料霊視やLINE追加の人数制限ではありません。
 
